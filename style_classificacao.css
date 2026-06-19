@@ -74,7 +74,7 @@ body {
 .btn-interclasses-equipe {
     background-color: #FFA500;
 }
-.jogos-recentes {
+.tabela {
     background-color: var(--cor04);
     color: var(--cor05);
     padding: 10px;
@@ -82,21 +82,31 @@ body {
     flex-direction: column;
     margin-top: 20px;
 }
-.jogos-recentes h3 {
+.tabela form select {
+    padding: 8px;
+}
+.tabela form select #esporte {
+    background-color: var(--cor02);
+}
+.tabela h3 {
     font-size: 1.6em;
     border-bottom: 2px solid var(--cor02);
 }
-
-.jogos-icones {
+.tabela-colocados {
+    margin: auto;
+    width: 50vw;
+}
+.colocado {
+    color: white;
+    background-color: #a09f9f17;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.resultados-icones {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
     margin-top: 10px;
-    width: 100%;
-}
-.jogos-divisao {
-    font-size: 5em;
 }
 .botoes {
     display: flex;
@@ -104,21 +114,11 @@ body {
     gap: 20px;
     border-radius: 10px;
     padding: 20px;
-    text-decoration: none;
-    color: var(--cor05);
-    width: 40%;
+    width: 50%;
 }
-
-.jogo-primeiro {
-    background-color: var(--cor02);
-}
-.jogo-segundo {
-    background-color: var(--cor01);
-}
-
 .ultimas-noticias {
     background-color: var(--cor03);
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 30px;
     color: var(--cor05);
 }
