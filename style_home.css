@@ -16,28 +16,34 @@
 header {
     background-color: var(--cor03);
 }
-header nav {
-    display: flex;
-    justify-content: space-around;
+nav {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     align-items: center;
+    justify-items: center;
     padding: 10px;
 }
 header nav a {
     text-decoration: none;
     color: var(--cor05);
-    height: 100%;
+}
+#logo {
+    grid-column: 1;
+}
+#home {
+    grid-column: 3;
+}
+#classificacao  {
+    grid-column: 4;
+}
+#mural {
+    grid-column: 5;
+}
+#perfil {
+    grid-column: 6;
 }
 body {
     background-color: var(--cor04);
-}
-.btn-entrar {
-    background-color: var(--cor01);
-    padding: 10px 40px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-.btn-entrar:hover {
-    background-color: var(--cor02);
 }
 .Interclasses {
     display: flex;
