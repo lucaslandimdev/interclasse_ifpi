@@ -42,6 +42,12 @@ header nav a {
 #perfil {
     grid-column: 6;
 }
+#inscricao {
+    grid-column: 7;
+    background-color: #006B3F;
+    padding: 10px;
+    border-radius: 10px;
+}
 body {
     background-color: var(--cor04);
 }

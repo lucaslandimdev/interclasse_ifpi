@@ -161,6 +161,12 @@ header nav a {
 #perfil {
     grid-column: 6;
 }
+#inscricao {
+    grid-column: 7;
+    background-color: #006B3F;
+    padding: 10px;
+    border-radius: 10px;
+}
 @media (max-width: 600px) {
     body {
         padding: 15px;
