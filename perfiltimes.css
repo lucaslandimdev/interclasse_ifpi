@@ -51,6 +51,14 @@ body{
     margin-bottom:20px;
     box-shadow:0 4px 12px rgba(0,0,0,.3);
 }
+.perfil-time6{
+    background: #00FFFF;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
 .perfil-time1 h1{
     margin-bottom:25px;
 }
