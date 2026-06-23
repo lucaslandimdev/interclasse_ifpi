@@ -1,183 +1,190 @@
+/* ═══════════════════════════════════════════════════════════════
+   RESET E BASE - Remove estilos padrão do navegador
+   ═══════════════════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; font-family: sans-serif; }
 
+/* ═══════════════════════════════════════════════════════════════
+   FUNDO DA PÁGINA - Imagem com overlay escuro
+   ═══════════════════════════════════════════════════════════════ */
 .page-bg {
-  min-height: 100svh;
-  padding: 30px 20px;
-  display: flex;
+  min-height: 100svh;           /* altura mínima = altura da tela */
+  padding: 30px 20px;           /* espaço interno */
+  display: flex;                /* centraliza o formulário */
   align-items: center;
   justify-content: center;
   background-image: url('https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=900&q=80');
-  background-size: cover;
+  background-size: cover;       /* imagem cobre toda a área */
   background-position: center;
   position: relative;
 }
 
+/* Cria camada escura sobre a imagem de fundo */
 .page-bg::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(0,30,10,0.58);
+  inset: 0;                     /* preenche todo o espaço */
+  background: rgba(0, 30, 10, 0.58);  /* verde escuro com transparência */
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   CONTENEDOR DO FORMULÁRIO - Caixa principal com efeito vidro
+   ═══════════════════════════════════════════════════════════════ */
 .form-wrap {
   position: relative;
-  z-index: 1;
-  background: rgba(200,220,235,0.93);
-  border-radius: 14px;
-  padding: 22px 24px;
+  z-index: 1;                   /* aparece acima do overlay */
+  background: rgba(200, 220, 235, 0.93);  /* azul claro com transparência */
+  border-radius: 14px;          /* cantos arredondados */
+  padding: 22px 24px;           /* espaço interno */
   width: 100%;
-  max-width: 480px;
-  border: 1.5px solid #b0c4d4;
-  backdrop-filter: blur(3px);
+  max-width: 480px;             /* largura máxima */
+  border: 1.5px solid #b0c4d4;  /* borda azulada */
+  backdrop-filter: blur(3px);   /* efeito vidro (blur) */
 }
 
-/* ── Cabeçalho ── */
+/* ═══════════════════════════════════════════════════════════════
+   CABEÇALHO - Título com ícone do futebol
+   ═══════════════════════════════════════════════════════════════ */
 .form-title {
-  display: flex;
+  display: flex;          /* alinha ícone + texto na horizontal */
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #a0b4c8;
+  gap: 12px;              /* espaço entre ícone e texto */
+  margin-bottom: 16px;    /* espaço para próxima seção */
+  padding-bottom: 12px;   /* espaço interno abaixo */
+  border-bottom: 1px solid #a0b4c8;  /* linha separadora */
 }
 
+/* Círculo com ícone do futebol */
 .icon-soccer {
-  background: #e0eef8;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #e0eef8;           /* azul bem claro */
   border: 1.5px solid #a0b4c8;
+  border-radius: 50%;            /* transforma em círculo */
   font-size: 20px;
+  flex-shrink: 0;                /* não diminui de tamanho */
 }
 
+/* Texto principal do cabeçalho */
 .form-title-main {
   font-size: 16px;
-  font-weight: 700;
-  color: #1a2a3a;
-  font-family: sans-serif;
-  line-height: 1.2;
+  font-weight: 700;   /* negrito */
+  color: #1a2a3a;     /* azul escuro */
+  line-height: 1.2;   /* espaço entre linhas */
 }
 
+/* Subtítulo do cabeçalho */
 .form-title-sub {
   font-size: 12px;
-  color: #4a6a7a;
-  font-family: sans-serif;
+  color: #4a6a7a;     /* azul médio/cinzento */
   margin-top: 2px;
 }
 
-/* ── Campos principais ── */
-.fields-box {
-  background: rgba(210,230,245,0.8);
-  border-radius: 10px;
-  padding: 14px 14px 6px;
-  margin-bottom: 12px;
+/* ═══════════════════════════════════════════════════════════════
+   CAMPOS E CAIXAS - Estilo comum para seções do formulário
+   ═══════════════════════════════════════════════════════════════ */
+.fields-box,
+.participantes-box {
+  background: rgba(210, 230, 245, 0.8);  /* azul muito claro */
   border: 1px solid #b8cce0;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   LINHAS DE CAMPOS - Estrutura label + input
+   ═══════════════════════════════════════════════════════════════ */
 .field-row {
-  display: flex;
+  display: flex;        /* alinha label e input na horizontal */
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-family: sans-serif;
+  gap: 10px;            /* espaço entre label e input */
+  margin-bottom: 10px;  /* espaço entre linhas */
 }
 
+/* Texto do rótulo (label) */
 .field-label {
   font-size: 13px;
+  font-weight: 600;     /* semi-negrito */
   color: #1a2a3a;
-  min-width: 86px;
-  font-weight: 600;
-  padding-top: 8px;
+  min-width: 86px;      /* mantém alinhamento dos inputs */
+  padding-top: 8px;     /* alinha com o input */
   line-height: 1.2;
 }
 
+/* Container do input (permite espaço para dicas) */
 .field-col {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 4px;
+  flex-direction: column;  /* alinha em coluna */
+  flex: 1;                 /* ocupa o espaço disponível */
+  gap: 4px;               /* espaço entre input e dica */
 }
 
-.field-input {
-  width: 100%;
+/* ═══════════════════════════════════════════════════════════════
+   INPUTS E SELECTS - Caixas de entrada de texto
+   ═══════════════════════════════════════════════════════════════ */
+.field-input,
+.field-select {
   height: 34px;
-  border-radius: 6px;
+  padding: 0 10px;                  /* espaço interno horizontal */
   border: 1px solid #a8bfd4;
-  background: #f4fafd;
-  padding: 0 10px;
+  border-radius: 6px;               /* cantos levemente arredondados */
+  background: #f4fafd;              /* azul muito claro */
   font-size: 14px;
   color: #1a2a3a;
-  outline: none;
-  font-family: sans-serif;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, background 0.15s;  /* animação suave */
 }
 
-.field-input:focus {
-  border-color: #2e7d32;
-  background: #fff;
+/* Estado do input quando focado (clicado) */
+.field-input:focus,
+.field-select:focus {
+  border-color: #2e7d32;  /* borda fica verde */
+  background: #fff;       /* fundo fica branco */
+  outline: none;          /* remove borda padrão do navegador */
 }
 
+/* Texto de dica/ajuda abaixo do input */
 .hint {
   font-size: 11.5px;
-  color: #4a6a7a;
-  font-family: sans-serif;
+  color: #4a6a7a;    /* cinzento claro */
   line-height: 1.4;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   CURSO E TURMA - Selects lado a lado
+   ═══════════════════════════════════════════════════════════════ */
 .curso-row {
-  display: flex;
+  display: flex;        /* alinha selects horizontalmente */
   align-items: center;
   gap: 8px;
   flex: 1;
-  flex-wrap: wrap;
-  padding-top: 2px;
+  flex-wrap: wrap;      /* quebra linha se necessário */
 }
 
 .field-select {
-  height: 34px;
-  border-radius: 6px;
-  border: 1px solid #a8bfd4;
-  background: #f4fafd;
-  padding: 0 8px;
-  font-size: 14px;
-  color: #1a2a3a;
-  font-family: sans-serif;
-  flex: 1;
-  min-width: 80px;
-  transition: border-color 0.15s;
+  flex: 1;              /* cresce para ocupar espaço */
+  min-width: 80px;      /* largura mínima */
 }
 
-.field-select:focus {
-  border-color: #2e7d32;
-  outline: none;
-}
-
+/* Label "Turma" */
 .turma-label {
   font-size: 13px;
-  color: #1a2a3a;
   font-weight: 600;
-  font-family: sans-serif;
-  white-space: nowrap;
+  color: #1a2a3a;
+  white-space: nowrap;  /* não quebra em múltiplas linhas */
 }
 
-/* ── Jogadores ── */
-.participantes-box {
-  background: rgba(210,230,245,0.8);
-  border-radius: 10px;
-  padding: 14px 14px 12px;
-  margin-bottom: 12px;
-  border: 1px solid #b8cce0;
-}
-
+/* ═══════════════════════════════════════════════════════════════
+   SEÇÃO DE JOGADORES - Lista de participantes
+   ═══════════════════════════════════════════════════════════════ */
+/* Cabeçalho da seção de jogadores */
 .participantes-header {
   display: flex;
+  justify-content: space-between;  /* espaça "Jogadores" e "Mín 5, Máx 7" */
   align-items: baseline;
-  justify-content: space-between;
   gap: 8px;
   margin-bottom: 10px;
 }
@@ -186,49 +193,44 @@ body { margin: 0; padding: 0; }
   font-size: 14px;
   font-weight: 700;
   color: #1a2a3a;
-  font-family: sans-serif;
 }
 
 .participantes-dica {
   font-size: 11.5px;
   color: #4a6a7a;
-  font-family: sans-serif;
 }
 
+/* Cabeçalhos das colunas (Nome completo, Matrícula) */
 .col-header {
   display: flex;
   gap: 8px;
-  margin-bottom: 5px;
-}
-
-.col-label {
+  margin-bottom: 8px;
   font-size: 12px;
-  color: #3a5a6a;
   font-weight: 600;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
+  color: #3a5a6a;
+  text-transform: uppercase;     /* transforma em MAIÚSCULAS */
+  letter-spacing: 0.4px;         /* espaço entre letras */
 }
 
-.col-label.nome { flex: 1.4; }
-.col-label.mat  { flex: 1; }
+.col-label.nome { flex: 1.4; }   /* coluna "Nome" é mais larga */
+.col-label.mat { flex: 1; }      /* coluna "Matrícula" é mais estreita */
 
+/* Linha de um jogador */
 .player-row {
   display: flex;
   gap: 8px;
   margin-bottom: 6px;
 }
 
+/* Input individual de jogador */
 .player-input {
   height: 32px;
-  border-radius: 6px;
-  border: 1px solid #a8bfd4;
-  background: #f4fafd;
   padding: 0 8px;
+  border: 1px solid #a8bfd4;
+  border-radius: 6px;
+  background: #f4fafd;
   font-size: 13px;
   color: #1a2a3a;
-  font-family: sans-serif;
-  min-width: 0;
   transition: border-color 0.15s, background 0.15s;
 }
 
@@ -238,40 +240,39 @@ body { margin: 0; padding: 0; }
   outline: none;
 }
 
-.player-input.nome { flex: 1.4; }
-.player-input.mat  { flex: 1; }
+.player-input.nome { flex: 1.4; }   /* mesma proporção do cabeçalho */
+.player-input.mat { flex: 1; }
 
+/* Botão para adicionar mais jogadores */
 .add-placeholder {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: transparent;
-  border: 1.5px dashed #7aaac8;
+  width: 100%;
+  height: auto;
+  padding: 8px 14px;
+  margin-top: 4px;
+  border: 1.5px dashed #7aaac8;   /* borda tracejada */
   border-radius: 6px;
-  padding: 6px 14px;
+  background: transparent;         /* fundo transparente */
   font-size: 13px;
   color: #2a5070;
-  font-family: sans-serif;
-  margin-top: 4px;
-  cursor: pointer;
-  width: 100%;
-  justify-content: center;
-  transition: background 0.15s, border-color 0.15s;
+  cursor: pointer;                 /* muda cursor para "clicável" */
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
+/* Efeito hover (ao passar o mouse) */
 .add-placeholder:hover {
-  background: rgba(46,125,50,0.07);
-  border-color: #2e7d32;
-  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.07);  /* verde muito claro */
+  border-color: #2e7d32;                /* borda fica verde */
+  color: #2e7d32;                       /* texto fica verde */
 }
 
-/* ── Regulamento ── */
+/* ═══════════════════════════════════════════════════════════════
+   REGULAMENTO - Checkbox e link
+   ═══════════════════════════════════════════════════════════════ */
 .regulamento-row {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 14px;
-  font-family: sans-serif;
 }
 
 .regulamento-row label {
@@ -280,55 +281,61 @@ body { margin: 0; padding: 0; }
   line-height: 1.4;
 }
 
+/* Link para o regulamento */
 .reg-link {
-  color: #2e7d32;
-  text-decoration: underline;
-  font-weight: 600;
+  color: #2e7d32;              /* verde */
+  text-decoration: underline;  /* sublinhado */
+  font-weight: 600;            /* semi-negrito */
 }
 
+/* Checkbox estilizado com cor verde */
 .checkbox-green {
   width: 16px;
   height: 16px;
-  accent-color: #2e7d32;
-  flex-shrink: 0;
+  accent-color: #2e7d32;  /* marca fica verde quando selecionada */
+  flex-shrink: 0;         /* não diminui de tamanho */
   cursor: pointer;
 }
 
-/* ── Botão ── */
+/* ═══════════════════════════════════════════════════════════════
+   BOTÃO DE ENVIO - Botão principal do formulário
+   ═══════════════════════════════════════════════════════════════ */
 .submit-btn {
-  display: block;
   width: 100%;
   height: 44px;
-  background: #2e7d32;
-  color: #fff;
+  background: #2e7d32;    /* verde */
+  color: #fff;            /* texto branco */
   border: none;
   border-radius: 8px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  font-family: sans-serif;
   letter-spacing: 0.4px;
-  touch-action: manipulation;
-  transition: background 0.15s;
+  transition: background 0.15s;  /* transição suave da cor */
 }
 
-.submit-btn:hover  { background: #256028; }
-.submit-btn:active { transform: scale(0.99); }
+.submit-btn:hover { background: #256028; }     /* verde mais escuro */
+.submit-btn:active { transform: scale(0.99); } /* comprime ao clicar */
 
-/* ── Responsivo ── */
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVO - Estilos para celulares (até 480px)
+   ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 480px) {
+  /* Remove padding e alinha formulário no topo */
   .page-bg {
     padding: 0;
     align-items: flex-start;
   }
 
+  /* Formulário ocupa tela inteira */
   .form-wrap {
-    border-radius: 0;
-    min-height: 100svh;
+    border-radius: 0;         /* sem cantos arredondados */
+    min-height: 100svh;       /* altura mínima = tela inteira */
     border: none;
     padding: 20px 16px;
   }
 
+  /* Campos empilham verticalmente */
   .field-row {
     flex-direction: column;
     gap: 4px;
@@ -339,10 +346,12 @@ body { margin: 0; padding: 0; }
     padding-top: 0;
   }
 
+  /* Inputs maiores para fácil toque */
   .field-input,
-  .field-select {
+  .field-select,
+  .player-input {
     height: 40px;
-    font-size: 16px; /* evita zoom automático no iOS */
+    font-size: 16px;   /* fonte maior evita zoom automático no iOS */
   }
 
   .player-input {
@@ -350,14 +359,15 @@ body { margin: 0; padding: 0; }
     font-size: 15px;
   }
 
+  /* Botão maior e mais ergonômico */
   .submit-btn {
     height: 50px;
     font-size: 16px;
   }
 
+  /* Título e dica empilham no celular */
   .participantes-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2px;
   }
 }
