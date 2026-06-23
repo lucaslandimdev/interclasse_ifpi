@@ -7,99 +7,117 @@
   <link rel="stylesheet" href="formulario.css" />
 </head>
 <body>
-<div class="page-bg">
-  <div class="form-wrap">
-    <div class="form-title">
-      <div class="icon-soccer">⚽</div>
-      <div>
-        <div class="form-title-main">Inscrição de Equipe</div>
-        <div class="form-title-sub">Preencha os dados abaixo para garantir sua vaga</div>
+  <header>
+    <nav>
+      <a href="index.html" id="logo"><img src="assets/logo.png" alt="Logo Interclasses IFPI" style="width: 100px;"></a>
+      <a href="index.html" id="home">Home</a>
+      <a href="classificacao.html" id="classificacao">Classificação</a>
+      <a href="mural.html" id="mural">Mural</a>
+      <a href="perfiltsi_1.html" id="perfil">Perfil do Time</a>
+      <a href="formulario.html" id="inscricao">Formulário de inscrição</a>
+    </nav>
+  </header>
+  <div class="page-bg">
+    <div class="form-wrap">
+      <div class="form-title">
+        <div class="icon-soccer">⚽</div>
+        <div>
+          <div class="form-title-main">Inscrição de Equipe</div>
+          <div class="form-title-sub">Preencha os dados abaixo para garantir sua vaga</div>
+        </div>
       </div>
+
+      <div class="fields-box">
+        <div class="field-row">
+          <label class="field-label" for="nome_equipe">Nome da equipe</label>
+          <div class="field-col">
+            <input class="field-input" type="text" id="nome_equipe" name="nome_equipe"
+              placeholder="Ex.: Guerreiros FC" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="curso">Curso</label>
+          <div class="curso-row">
+            <select class="field-select" id="curso" name="curso">
+              <option value="">Selecione...</option>
+              <option>ADSI</option>
+              <option>Informática</option>
+              <option>Redes</option>
+            </select>
+            <label class="turma-label" for="turma">Turma</label>
+            <select class="field-select" id="turma" name="turma">
+              <option value="">Selecione...</option>
+              <option>1º Ano</option>
+              <option>2º Ano</option>
+              <option>3º Ano</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="capitao">Capitão</label>
+          <div class="field-col">
+            <input class="field-input" type="text" id="capitao" name="capitao" placeholder="Ex.: João Silva" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="email">E-mail</label>
+          <div class="field-col">
+            <input class="field-input" type="email" id="email" name="email" placeholder="nome@exemplo.com" />
+            <span class="hint">Vamos usar esse e-mail para avisar sobre a inscrição.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="telefone">WhatsApp</label>
+          <div class="field-col">
+            <input class="field-input" type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" />
+            <span class="hint">Número do capitão para contato rápido.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participantes-box">
+        <div class="participantes-header">
+          <span class="participantes-titulo">Jogadores da equipe</span>
+          <span class="participantes-dica">Mínimo de 5, máximo de 7</span>
+        </div>
+        <div class="col-header">
+          <span class="col-label nome">Nome completo</span>
+          <span class="col-label mat">Matrícula</span>
+        </div>
+        <div class="player-row">
+          <input class="player-input nome" type="text" name="participante_1_nome" placeholder="Nome do jogador"
+            aria-label="Nome do participante 1" />
+          <input class="player-input mat" type="text" name="participante_1_mat" placeholder="Matrícula"
+            aria-label="Matrícula do participante 1" />
+        </div>
+        <div class="player-row">
+          <input class="player-input nome" type="text" name="participante_2_nome" placeholder="Nome do jogador"
+            aria-label="Nome do participante 2" />
+          <input class="player-input mat" type="text" name="participante_2_mat" placeholder="Matrícula"
+            aria-label="Matrícula do participante 2" />
+        </div>
+        <div class="player-row">
+          <input class="player-input nome" type="text" name="participante_3_nome" placeholder="Nome do jogador"
+            aria-label="Nome do participante 3" />
+          <input class="player-input mat" type="text" name="participante_3_mat" placeholder="Matrícula"
+            aria-label="Matrícula do participante 3" />
+        </div>
+        <button type="button" class="add-placeholder">+ Adicionar jogador</button>
+      </div>
+
+      <div class="regulamento-row">
+        <input type="checkbox" class="checkbox-green" id="reg" name="regulamento" />
+        <label for="reg">Li e aceito o <a href="#" class="reg-link">regulamento do campeonato</a></label>
+      </div>
+
+      <button class="submit-btn" type="button">Enviar inscrição</button>
     </div>
-
-    <div class="fields-box">
-      <div class="field-row">
-        <label class="field-label" for="nome_equipe">Nome da equipe</label>
-        <div class="field-col">
-          <input class="field-input" type="text" id="nome_equipe" name="nome_equipe" placeholder="Ex.: Guerreiros FC" />
-        </div>
-      </div>
-
-      <div class="field-row">
-        <label class="field-label" for="curso">Curso</label>
-        <div class="curso-row">
-          <select class="field-select" id="curso" name="curso">
-            <option value="">Selecione...</option>
-            <option>ADSI</option>
-            <option>Informática</option>
-            <option>Redes</option>
-          </select>
-          <label class="turma-label" for="turma">Turma</label>
-          <select class="field-select" id="turma" name="turma">
-            <option value="">Selecione...</option>
-            <option>1º Ano</option>
-            <option>2º Ano</option>
-            <option>3º Ano</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="field-row">
-        <label class="field-label" for="capitao">Capitão</label>
-        <div class="field-col">
-          <input class="field-input" type="text" id="capitao" name="capitao" placeholder="Ex.: João Silva" />
-        </div>
-      </div>
-
-      <div class="field-row">
-        <label class="field-label" for="email">E-mail</label>
-        <div class="field-col">
-          <input class="field-input" type="email" id="email" name="email" placeholder="nome@exemplo.com" />
-          <span class="hint">Vamos usar esse e-mail para avisar sobre a inscrição.</span>
-        </div>
-      </div>
-
-      <div class="field-row">
-        <label class="field-label" for="telefone">WhatsApp</label>
-        <div class="field-col">
-          <input class="field-input" type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" />
-          <span class="hint">Número do capitão para contato rápido.</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="participantes-box">
-      <div class="participantes-header">
-        <span class="participantes-titulo">Jogadores da equipe</span>
-        <span class="participantes-dica">Mínimo de 5, máximo de 7</span>
-      </div>
-      <div class="col-header">
-        <span class="col-label nome">Nome completo</span>
-        <span class="col-label mat">Matrícula</span>
-      </div>
-      <div class="player-row">
-        <input class="player-input nome" type="text" name="participante_1_nome" placeholder="Nome do jogador" aria-label="Nome do participante 1" />
-        <input class="player-input mat" type="text" name="participante_1_mat" placeholder="Matrícula" aria-label="Matrícula do participante 1" />
-      </div>
-      <div class="player-row">
-        <input class="player-input nome" type="text" name="participante_2_nome" placeholder="Nome do jogador" aria-label="Nome do participante 2" />
-        <input class="player-input mat" type="text" name="participante_2_mat" placeholder="Matrícula" aria-label="Matrícula do participante 2" />
-      </div>
-      <div class="player-row">
-        <input class="player-input nome" type="text" name="participante_3_nome" placeholder="Nome do jogador" aria-label="Nome do participante 3" />
-        <input class="player-input mat" type="text" name="participante_3_mat" placeholder="Matrícula" aria-label="Matrícula do participante 3" />
-      </div>
-      <button type="button" class="add-placeholder">+ Adicionar jogador</button>
-    </div>
-
-    <div class="regulamento-row">
-      <input type="checkbox" class="checkbox-green" id="reg" name="regulamento" />
-      <label for="reg">Li e aceito o <a href="#" class="reg-link">regulamento do campeonato</a></label>
-    </div>
-
-    <button class="submit-btn" type="button">Enviar inscrição</button>
   </div>
-</div>
 
 </body>
+
 </html>
