@@ -68,7 +68,6 @@ header nav a{
     max-width:1200px;
     margin:35px auto;
     padding:0 20px;
-
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:25px;
