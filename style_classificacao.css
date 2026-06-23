@@ -118,6 +118,8 @@ body {
     width: 50vw;
 }
 .colocado {
+    display: flex;
+    text-decoration: none;
     color: white;
     background-color: #a09f9f17;
     padding: 10px;
