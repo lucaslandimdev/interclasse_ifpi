@@ -168,37 +168,6 @@ header nav a{
     font-size:2rem;
 }
 
-/* GALERIA */
-
-.carrossel{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    padding:15px 5px;
-}
-
-.carrossel::-webkit-scrollbar{
-    height:8px;
-}
-
-.carrossel::-webkit-scrollbar-thumb{
-    background:#006b3f;
-    border-radius:20px;
-}
-
-.carrossel img{
-    min-width:350px;
-    height:220px;
-    object-fit:cover;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.carrossel img:hover{
-    transform:scale(1.08);
-}
-
 /* RODAPÉ */
 
 .rodape{

@@ -12,6 +12,7 @@
     --cor05: #FFFFFF;
     --cor06: #2563eb;
     --cor07: #1e3a5f;
+    --cor08: #FFA500;
 }
 header {
     background-color: var(--cor03);
@@ -68,7 +69,7 @@ body {
 .Interclasses h3{
     color: var(--cor05);
     text-shadow: 1px 2px 5px black;
-    font-size: 3em;
+    font-size: 2em;
 }
 .apresentacao_interclasses {
     margin-top: 30px;
@@ -78,13 +79,13 @@ body {
     text-decoration: none;
     color: var(--cor05);
     border-radius: 7px;
-    padding: 20px 60px;
+    padding: 20px;
 }
 .btn-interclasses-tabela {
     background-color: var(--cor01);
 }
 .btn-interclasses-equipe {
-    background-color: #FFA500;
+    background-color: var(--cor08);
 }
 .jogos-recentes {
     background-color: var(--cor04);
@@ -95,7 +96,7 @@ body {
     margin-top: 20px;
 }
 .jogos-recentes h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     border-bottom: 2px solid var(--cor02);
 }
 
@@ -108,7 +109,7 @@ body {
     width: 100%;
 }
 .jogos-divisao {
-    font-size: 5em;
+    font-size: 1.5em;
 }
 .botoes {
     display: flex;
